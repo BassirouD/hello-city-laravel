@@ -2,7 +2,7 @@
 
 @section('title', config('app.name'))
 @section('content')
-    <img src="/images/drp.png" alt="Senegal Flag">
+    <img src="{{ asset('images/drp.png') }}" alt="Senegal Flag">
         <h1>Hello from Senegal</h1>
         <p>It's currently {{ date('h:i A') }}.</p>
 @endsection

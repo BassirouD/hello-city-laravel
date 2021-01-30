@@ -18,7 +18,12 @@
 <footer>
     <!-- Par defaut le timeZone est utc. On peut le modifier
     dans le fichier app.php qui se trouve dans le rep config-->
-    <p>&copy; Copyright {{ date('Y') }} &middot; <a href="{{route('about')}}">About Us</a></p>
+    <p>
+        &copy; Copyright {{ date('Y') }} &middot;
+        @if(! Route::is('about'))
+            <a href="{{route('about')}}">About Us</a>
+        @endif
+    </p>
 </footer>
 </body>
 </html>

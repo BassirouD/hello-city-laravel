@@ -4,12 +4,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>@yield('title', 'Contenu par defaut')!</title>
+    <title>@yield('title', env('APP_NAME'))!</title>
 
 </head>
 <body class="antialiased">
 
     @yield('content')
+    {{ dump(config('app.name')) }}
+    <!-- On peut utiliser les variables de configuration
+        pour afficher le nom de l'app en remplaçant
+        env par config('app.name')
+    -->
 
 <footer>
     <!-- Par defaut le timeZone est utc. On peut le modifier

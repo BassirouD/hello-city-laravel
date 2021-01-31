@@ -1,8 +1,6 @@
-@extends('base')
+@extends('layouts.base', ['pageTitle' => 'About Us'])
 
 
-@section('title', 'About Us | ' . env('APP_NAME'))
- <!-- endsection equivant a stop -->
 @section('content')
     <img src="{{ asset('images/tdsi.png') }}" alt="TDSI logo" class="my-12 rounded shadow-md">
     <h2 class="mb-5 text-gray-700">
